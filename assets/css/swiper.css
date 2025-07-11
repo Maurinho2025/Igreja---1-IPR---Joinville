@@ -1,0 +1,47 @@
+/* Alterar cor das setas */
+
+@import "tailwindcss";
+:root {
+  --breakpoint-xs: 30rem;
+  --breakpoint-2xl: 100rem;
+  --breakpoint-3xl: 120rem;
+}
+
+:root {
+  --color-primary: #f4eae6;
+  --color-second: #e5d6ca;
+  --color-test: #e0d2c6;
+  --color-title-color: #8e6e55;
+  --color-gradient: linear-gradient(
+    90deg,
+    rgba(241, 202, 107, 1) 0%,
+    rgba(176, 122, 37, 1) 15%,
+    rgba(241, 202, 107, 1) 50%,
+    rgba(180, 127, 42, 1) 85%,
+    rgba(241, 202, 107, 1) 100%
+  );
+
+  --font-quiche: "quiche-sans", sans-serif;
+  --font-display: "montserrat", sans-serif;
+  --font-authography: "Autography", sans-serif;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #e5d6ca;
+    /* Defina a cor desejada */
+}
+
+/* Alterar cor dos dots (paginações) */
+.swiper-pagination-bullet {
+    background: #8e6e55;
+    /* Cor padrão */
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    background: #f4eae6;
+    /* Cor do dot ativo */
+    opacity: 1;
+}

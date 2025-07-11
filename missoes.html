@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Missões da 1ª Igreja Presbiteriana Renovada de Joinville - Levando a mensagem do evangelho a todos os cantos. Conheça nossos projetos e como participar." />
+  <meta name="keywords"
+    content="igreja, presbiteriana, renovada, Joinville, fé, comunidade, adoração, evangelho, missões, projetos missionários" />
+  <meta name="author" content="1ª Igreja Presbiteriana Renovada de Joinville" />
+  <meta property="og:title" content="Missões - 1ª Igreja Presbiteriana Renovada de Joinville" />
+  <meta property="og:description"
+    content="Levando a mensagem do evangelho a todos os cantos. Conheça nossos projetos e como participar." />
+  <meta property="og:image" content="./assets/images/png/logo_ipr.png" />
+  <meta property="og:url" content="https://iprjoinville.com.br/missoes.html" />
+
+  <title>Missões - 1ª Igreja Presbiteriana Renovada de Joinville</title>
+  <script src="https://tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="./assets/css/output.css" />
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="shortcut icon" style="width: 220px; height: 220px" href="./assets/images/png/logo_ipr.png"
+    type="image/x-icon" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/css/swiper.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <style type="text/tailwindcss">
+    @import "tailwindcss";
+    @theme {
+        --color-primary: #f4eae6;
+        --color-second: #e5d6ca;
+        --color-test: #e0d2c6;
+        --color-title-color: #8e6e55;
+        --color-gradient: linear-gradient(
+          90deg,
+          rgba(241, 202, 107, 1) 0%,
+          rgba(176, 122, 37, 1) 15%,
+          rgba(241, 202, 107, 1) 50%,
+          rgba(180, 127, 42, 1) 85%,
+          rgba(241, 202, 107, 1) 100%
+        );
+        --font-quiche: "quiche-sans", sans-serif;
+        --font-display: "montserrat", sans-serif;
+        --font-authography: "Autography", sans-serif;
+        --font-bilbo: "Bilbo Swash Caps", cursive;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        cursor: pointer;
+        background: #8e6e55;
+        border-radius: 30px;
+      }
+
+      @layer utilities {
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        @font-face {
+           font-family: Autography;
+           font-display: swap;
+           src: url("../fonts/Autography.otf") format("opentype");
+           font-family: 'Bilbo Swash Caps', cursive;
+        }
+      }
+    </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body class="bg-primary scroll-smooth max-2xl:overflow-x-hidden">
+  <header class="w-screen bg-primary shadow-lg shadow-black/20 min-h-20 fixed top-0 left-0 z-50" role="banner">
+    <div class="w-full max-w-[1180px] px-5 h-25 mx-auto flex items-center justify-between">
+      <div class="h-full py-1 flex items-center">
+        <a href="index.html" aria-label="Página inicial">
+          <h2
+            class="text-2xl font-quiche bg-gradient-to-r font-bold to-[#f1ca6b] from-[#f1ca6b] via-[#b07a25] bg-clip-text text-transparent">
+            1° Igreja Presbiteriana
+            <p
+              class="text-lg font-quiche bg-gradient-to-r font-bold from-[#040404] via-[#121111] to-[#0c0c0c] bg-clip-text text-transparent">
+              Renovada de Joinville
+          </h2>
+        </a>
+      </div>
+
+      <div class="max-lg:hidden">
+        <nav role="navigation" aria-label="Menu principal">
+          <ul class="flex items-center gap-x-10 text-lg font-display text-title-color">
+            <li class="group">
+              <a href="index.html"
+                class="relative before:transition-all before:duration-200 group-hover:before:w-full before:w-0 before:h-[2px] before:absolute font-quiche bg-gradient-to-r font-bold from-[#030303] via-[#000000] to-[#222120] bg-clip-text text-transparent">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="index.html#sobre-mim"
+                class="block font-bold font-quiche bg-gradient-to-r from-[#030303] via-[#000000] to-[#222120] bg-clip-text text-transparent">Quem
+                Somos</a>
+            </li>
+            <li class="group">
+              <a href="quero ser membro.html#quero ser membro"
+                class="relative before:transition-all before:duration-200 group-hover:before:w-full before:w-0 before:h-[2px] before:absolute font-quiche bg-gradient-to-r font-bold from-[#030303] via-[#000000] to-[#222120] bg-clip-text text-transparent">
+                Quero ser Membro
+              </a>
+            </li>
+            <li class="group">
+              <a href="missoes.html#missoes"
+                class="relative before:transition-all before:duration-200 group-hover:before:w-full before:w-0 before:h-[2px] before:absolute font-quiche bg-gradient-to-r font-bold from-[#030303] via-[#000000] to-[#222120] bg-clip-text text-transparent">
+                Missões
+              </a>
+            </li>
+            <li class="group">
+              <a href="contribua.html#contribua"
+                class="relative before:transition-all before:duration-200 group-hover:before:w-full before:w-0 before:h-[2px] before:absolute font-quiche bg-gradient-to-r font-bold from-[#030303] via-[#000000] to-[#222120] bg-clip-text text-transparent">
+                Contribua
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="lg:hidden">
+        <button id="menu-toggle-open" class="text-lg mr-4 cursor-pointer text-title-color focus:outline-none"
+          aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#b07a25" viewBox="0 0 256 256"
+            aria-hidden="true">
+            <path
+              d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z">
+            </path>
+          </svg>
+        </button>
+
+        <button id="menu-toggle-close"
+          class="text-xl hidden mr-4 font-display cursor-pointer text-title-color focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#b07a25" viewBox="0 0 256 256">
+            <path
+              d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z">
+            </path>
+          </svg>
+        </button>
+
+        <nav id="mobile-menu" class="hidden absolute top-22 left-0 w-full bg-primary shadow-lg shadow-black/20 rounded-xl"
+          role="navigation" aria-label="Menu mobile">
+          <ul class="flex flex-col items-center py-4 gap-y-4 text-lg font-display text-title-color">
+            <li class="group">
+              <a href="index.html"
+                class="relative before:transition-all before:duration-200 group-hover:before:w-full before:w-0 before:h-[2px] before:absolute font-quiche bg-gradient-to-r font-bold from-[#030303] via-[#000000] to-[#222120] bg-clip-text text-transparent">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="index.html#sobre-mim"
+                class="block font-bold font-quiche bg-gradient-to-r from-[#030303] via-[#000000] to-[#222120] bg-clip-text text-transparent">Quem
+                Somos</a>
+            </li>
+            <li class="group">
+              <a href="quero ser membro.html#quero ser membro"
+                class="relative before:transition-all before:duration-200 group-hover:before:w-full before:w-0 before:h-[2px] before:absolute font-quiche bg-gradient-to-r font-bold from-[#030303] via-[#000000] to-[#222120] bg-clip-text text-transparent">
+                Quero ser Membro
+              </a>
+            </li>
+            <li class="group">
+              <a href="missoes.html#missoes"
+                class="relative before:transition-all before:duration-200 group-hover:before:w-full before:w-0 before:h-[2px] before:absolute font-quiche bg-gradient-to-r font-bold from-[#030303] via-[#000000] to-[#222120] bg-clip-text text-transparent">
+                Missões
+              </a>
+            </li>
+            <li class="group">
+              <a href="contribua.html#contribua"
+                class="relative before:transition-all before:duration-200 group-hover:before:w-full before:w-0 before:h-[2px] before:absolute font-quiche bg-gradient-to-r font-bold from-[#030303] via-[#000000] to-[#222120] bg-clip-text text-transparent">
+                Contribua
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="mt-20">
+    <section class="w-full relative">
+      <img src="./assets/images/jpeg/igreja.jpeg" alt="Banner do Contato" class="w-full h-[250px] md:h-auto object-fill opacity-90 md:opacity-100">
+  </section>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+    </script>
+    <section class="w-full max-w-[1180px] mx-auto px-5 py-12 md:py-20 bg-primary rounded-lg shadow-lg relative z-10"
+      id="missoes">
+      <div class="h-fit w-full relative mb-10 text-center">
+        <h2
+          class="mb-10 font-quiche text-3xl md:text-4xl font-bold pb-2 relative w-fit mx-auto bg-gradient-to-r from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent">
+          Nossas Missões
+        </h2>
+        <p
+          class="my-5 text-lg text-justify text-title-color min-md:text-base font-quiche font-bold pb-2 relative font-quiche bg-gradient-to-r from-[#040404] via-[#121111] to-[#0c0c0c] bg-clip-text text-transparent">
+          Na 1° Igreja Presbiteriana Renovada de Joinville, as missões são o coração de nossa fé e ação. Acreditamos no
+          mandato de Jesus de "ide por todo o mundo e pregai o evangelho a toda criatura" (Marcos 16:15). Nossas
+          missões se estendem localmente e globalmente, buscando levar esperança e transformação através do amor de
+          Cristo.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-second p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+          <img src="./assets/images/png/mission_local.png" alt="Missão Local" class="w-24 h-24 mb-4 object-contain">
+          <h3
+            class="text-xl font-quiche bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent mb-3">
+            Missões Locais
+          </h3>
+          <p
+            class="text-md text-justify text-title-color font-quiche bg-gradient-to-r from-[#040404] via-[#121111] to-[#0c0c0c] bg-clip-text text-transparent">
+            Atuamos em nossa comunidade de Joinville, com projetos de apoio social, evangelismo em bairros, visitas a
+            hospitais e lares de idosos. Levamos a Palavra e o conforto através de ações práticas de amor ao próximo.
+          </p>
+        </div>
+
+        <div class="bg-second p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+          <img src="./assets/images/png/mission_national.png" alt="Missão Nacional"
+            class="w-24 h-24 mb-4 object-contain">
+          <h3
+            class="text-xl font-quiche bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent mb-3">
+            Missões Nacionais
+          </h3>
+          <p
+            class="text-md text-justify text-title-color font-quiche bg-gradient-to-r from-[#040404] via-[#121111] to-[#0c0c0c] bg-clip-text text-transparent">
+            Apoiamos missionários e projetos em diversas regiões do Brasil, alcançando comunidades carentes, ribeirinhos
+            e povos indígenas. Contribuímos para a plantação de igrejas e desenvolvimento social em áreas remotas.
+          </p>
+        </div>
+
+        <div class="bg-second p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+          <img src="./assets/images/png/mission_global.png" alt="Missão Transcultural"
+            class="w-24 h-24 mb-4 object-contain">
+          <h3
+            class="text-xl font-quiche bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent mb-3">
+            Missões Transculturais
+          </h3>
+          <p
+            class="text-md text-justify text-title-color font-quiche bg-gradient-to-r from-[#040404] via-[#121111] to-[#0c0c0c] bg-clip-text text-transparent">
+            Temos o privilégio de apoiar missionários em diferentes países, levando a mensagem de Cristo a culturas
+            distintas. Oramos e contribuímos para o avanço do Reino de Deus em escala global.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-16 text-center">
+        <h3
+          class="text-2xl font-quiche bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent mb-6">
+          Como Você Pode Participar
+        </h3>
+        <ul
+          class="list-disc list-inside text-lg text-title-color font-quiche bg-gradient-to-r from-[#040404] via-[#121111] to-[#0c0c0c] bg-clip-text text-transparent space-y-3">
+          <li>
+            <strong
+              class="font-quiche bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent">Oração:</strong>
+            Interceda pelos missionários e pelos projetos. A oração é a base de tudo que fazemos.
+          </li>
+          <li>
+            <strong
+              class="font-quiche bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent">Doação:</strong>
+            Contribua financeiramente para sustentar os projetos missionários. Cada doação faz a diferença.
+          </li>
+          <li>
+            <strong
+              class="font-quiche bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent">Serviço Voluntário:</strong>
+            Participe de nossas ações missionárias locais e, se possível, de viagens missionárias.
+          </li>
+          <li>
+            <strong
+              class="font-quiche bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent">Divulgação:</strong>
+            Compartilhe sobre nossos projetos e incentive outras pessoas a se envolverem.
+          </li>
+        </ul>
+        <a href="contribua.html#contribua"
+          class="inline-block mt-8 px-8 py-3 bg-gradient-to-r from-[#b07a25] via-[#b07a25] to-[#f1ca6b] text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+          Contribua Agora
+        </a>
+      </div>
+    </section>
+
+    <script>
+      function toggleAccordion(header) {
+        const accordionItem = header.parentNode;
+        const accordionBody = header.nextElementSibling;
+        const chevronIcon = header.querySelector(".fa-chevron-down");
+
+        if (accordionBody.style.maxHeight) {
+          accordionBody.style.maxHeight = null;
+          chevronIcon.classList.remove("rotate-180");
+        } else {
+          accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
+          chevronIcon.classList.add("rotate-180");
+        }
+      }
+    </script>
+
+    <script>
+      function toggleAccordion(header) {
+        const accordionItem = header.parentNode;
+        const body = header.nextElementSibling;
+        const icon = header.querySelector(".fa-chevron-down");
+        const isActive = body.classList.contains("max-h-0");
+
+        const allHeaders =
+          accordionItem.parentNode.querySelectorAll(".accordion-header");
+        allHeaders.forEach((otherHeader) => {
+          if (otherHeader !== header) {
+            const otherBody = otherHeader.nextElementSibling;
+            const otherIcon = otherHeader.querySelector(".fa-chevron-down");
+            otherBody.classList.add("max-h-0");
+            otherBody.style.paddingTop = "0";
+            otherBody.style.paddingBottom = "0";
+            otherIcon.classList.remove("rotate-180");
+          }
+        });
+
+        body.classList.toggle("max-h-0");
+        icon.classList.toggle("rotate-180");
+
+        if (isActive) {
+          body.style.paddingTop = "1.25rem";
+          body.style.paddingBottom = "1.25rem";
+        } else {
+          body.style.paddingTop = "0";
+          body.style.paddingBottom = "0";
+        }
+      }
+    </script>
+
+  </main>
+
+  <footer class="w-full bg-second" role="contentinfo">
+    <div class="w-full max-w-[1180px] px-5 pt-20 pb-5 mx-auto min-h-20">
+      <div class="flex items-center justify-between max-sm:flex-col max-sm:justify-center">
+        <div>
+          <h2
+            class="text-2xl flex flex-col items-center md:items-start font-quiche bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent">
+            1° Igreja Presbiteriana
+            <p
+              class="text-lg flex flex-col items-center md:items-start font-quiche bg-gradient-to-r font-bold from-[#040404] via-[#121111] to-[#0c0c0c] bg-clip-text text-transparent">
+              Renovada de Joinville
+          </h2>
+          <p
+            class="text-md w-full text-center md:w-fit font-quiche bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#b07a25] bg-clip-text pt-2 text-transparent">
+            <span><i class="fa-solid fa-envelope font-bold text-[#b07a25]"></i></span>
+            1°iprdejoinville@gmail.com
+          </p>
+        </div>
+        <div class="max-sm:mb-5 pb-8 pt-12 md:pt-6">
+          <h3
+            class="text-md w-full text-center md:w-fit font-quiche bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#b07a25] bg-clip-text pt-2 text-transparent">
+            Acompanhe nas redes sociais
+          </h3>
+          <ul class="flex justify-end gap-5 text-2xl text-title-color max-sm:justify-center">
+            <li>
+              <a href="https://www.instagram.com/ipr_joinville/"><i
+                  class="fa-brands fa-square-instagram text-3xl text-[#b07a25]"></i></a>
+            </li>
+            <li>
+              <a href="https://wa.me/554797861243?text=Como%2C%20posso%20ajudar!%20Você%20!" target="_blank"><i
+                  class="fa-brands fa-square-whatsapp text-3xl text-[#b07a25]"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="text-center font-display text-title-color font-quiche bg-gradient-to-r font-bold from-[#040404] via-[#121111] to-[#0c0c0c] bg-clip-text md:pt-8 text-transparent -mb-4 opacity-60 text-sm">
+        <p>
+          © 2025 1° Igreja Presbiteriana Renovada de Joinville.Todos os direitos reservados.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document
+      .getElementById("menu-toggle-open")
+      .addEventListener("click", function () {
+        document.getElementById("mobile-menu").classList.remove("hidden");
+        document.getElementById("menu-toggle-open").classList.add("hidden");
+        document
+          .getElementById("menu-toggle-close")
+          .classList.remove("hidden");
+      });
+
+    document
+      .getElementById("menu-toggle-close")
+      .addEventListener("click", function () {
+        document.getElementById("mobile-menu").classList.add("hidden");
+        document
+          .getElementById("menu-toggle-open")
+          .classList.remove("hidden");
+        document.getElementById("menu-toggle-close").classList.add("hidden");
+      });
+  </script>
+
+  <a href="https://wa.me/5547997736515?text=Oi%2C%20seja%20bem-vindo(a)!%20Aqui%20é%20a%20Dra.%20Luana%20Naiz%2C%20estou%20à%20disposição%20para%20te%20atender.%20Me%20envie%20seu%20nome%20e%20o%20tratamento%20que%20possui%20interesse%20em%20agendar.%20Assim%20que%20possível%2C%20retorno%20com%20as%20opções%20de%20horários.%20Qualquer%20dúvida%2C%20estou%20à%20disposição!"
+    target="_blank" rel="noopener noreferrer"
+    class="fixed size-10 bottom-4 right-2 z-50 flex items-center justify-center" aria-label="Abrir WhatsApp">
+    <img src="./assets/images/png/whatsapp.png" alt="Ícone do WhatsApp" width="56" height="56" />
+  </a>
+
+  <script src="./assets/js/menu.js" defer></script>
+  <script src="./assets/js/procedimentos.js"></script>
+</body>
+
+</html>
