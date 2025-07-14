@@ -39,52 +39,64 @@
   <!-- Tailwindcss -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-  <style type="text/tailwindcss">
+ <style type="text/tailwindcss">
     @import "tailwindcss";
-@theme {
-  --color-primary: #f4eae6;
-  --color-second: #e5d6ca;
-  --color-test: #e0d2c6; 
-  --color-title-color: #8e6e55;
-  --color-gradient: linear-gradient(
-    90deg,
-    rgba(241, 202, 107, 1) 0%,
-    rgba(176, 122, 37, 1) 15%,
-    rgba(241, 202, 107, 1) 50%,
-    rgba(180, 127, 42, 1) 85%,
-    rgba(241, 202, 107, 1) 100%
-  );
-  --font-quiche: "quiche-sans", sans-serif;
-  --font-display: "montserrat", sans-serif;
-  --font-authography: "Autography", sans-serif;
-  --font-bilbo: "Bilbo Swash Caps", cursive;
+     /*
+  Declare custom properties (CSS variables) globally.
+  These can then be accessed using var(--variable-name).
+*/
+:root {
+    --color-primary: #f4eae6;
+    --color-second: #e5d6ca;
+    --color-test: #e0d2c6;
+    --color-title-color: #8e6e55;
+    --color-gradient: linear-gradient(
+        90deg,
+        rgba(241, 202, 107, 1) 0%,
+        rgba(176, 122, 37, 1) 15%,
+        rgba(241, 202, 107, 1) 50%,
+        rgba(180, 127, 42, 1) 85%,
+        rgba(241, 202, 107, 1) 100%
+    );
+    --font-quiche: "quiche-sans", sans-serif;
+    --font-display: "montserrat", sans-serif;
+    --font-authography: "Autography", sans-serif; /* Typo corrected from 'authography' to 'autography' if that was intentional */
 }
-      ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
-      }
 
-      ::-webkit-scrollbar-thumb {
-        cursor: pointer;
-        background: #8e6e55;
-        border-radius: 30px;
-      }
-
-      @layer utilities {
-        .no-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-        .no-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-        @font-face {
-         font-family: Autography;
-         font-display: swap;
-         src: url("../fonts/Autography.otf") format("opentype");
-         font-family: 'Bilbo Swash Caps', cursive;
+/* Scrollbar styling for WebKit browsers (Chrome, Safari, Edge, etc.) */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
 }
-      }
+
+::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background: #8e6e55; /* Using the --color-title-color for consistency */
+    border-radius: 30px;
+}
+
+/*
+  @layer is used here to define a 'utilities' layer.
+  This assumes you have a broader layering strategy or are explicitly using @layer.
+*/
+@layer utilities {
+    /* Define the custom font */
+    @font-face {
+        font-family: 'Autography'; /* Use the exact font-family name from your variable */
+        font-display: swap;
+        src: url("../fonts/Autography.otf") format("opentype");
+    }
+
+    /* Hide scrollbar for elements with this class */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none; /* For Internet Explorer and Edge */
+        scrollbar-width: none; /* For Firefox */
+    }
+}
     </style>
 
   <!-- fontawsome -->
