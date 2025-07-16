@@ -39,54 +39,63 @@
   <!-- Tailwindcss -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-   <style type="text/tailwindcss">
+  <style type="text/tailwindcss">
     @import "tailwindcss";
     @theme {
-        --color-primary: #f4eae6;
-        --color-second: #e5d6ca;
-        --color-test: #e0d2c6;
-        --color-title-color: #8e6e55;
-        --color-gradient: linear-gradient(
-            90deg,
-            rgba(241, 202, 107, 1) 0%,
-            rgba(176, 122, 37, 1) 15%,
-            rgba(241, 202, 107, 1) 50%,
-            rgba(180, 127, 42, 1) 85%,
-            rgba(241, 202, 107, 1) 100%
-        );
-        --font-quiche: "quiche-sans", sans-serif;
-        --font-display: "montserrat", sans-serif;
-        --font-authography: "Autography", sans-serif;
+    --color-primary: #f4eae6;
+    --color-second: #e5d6ca;
+    --color-test: #e0d2c6;
+    --color-title-color: #8e6e55;
+    --color-gradient: linear-gradient(
+        90deg,
+        rgba(241, 202, 107, 1) 0%,
+        rgba(176, 122, 37, 1) 15%,
+        rgba(241, 202, 107, 1) 50%,
+        rgba(180, 127, 42, 1) 85%,
+        rgba(241, 202, 107, 1) 100%
+    );
+    --font-quiche: "quiche-sans", sans-serif;
+    --font-display: "montserrat", sans-serif;
+    --font-authography: "Autography", sans-serif; /* Typo corrected from 'authography' to 'autography' if that was intentional */
+}
+
+/* Scrollbar styling for WebKit browsers (Chrome, Safari, Edge, etc.) */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background: #8e6e55; /* Using the --color-title-color for consistency */
+    border-radius: 30px;
+}
+
+/*
+  @layer is used here to define a 'utilities' layer.
+  This assumes you have a broader layering strategy or are explicitly using @layer.
+*/
+@layer utilities {
+    /* Define the custom font */
+    @font-face {
+        font-family: 'Autography'; /* Use the exact font-family name from your variable */
+        font-display: swap;
+        src: url("../fonts/Autography.otf") format("opentype");
     }
 
-    ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
+    /* Hide scrollbar for elements with this class */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
     }
 
-    ::-webkit-scrollbar-thumb {
-        cursor: pointer;
-        background: #8e6e55;
-        border-radius: 30px;
+    .no-scrollbar {
+        -ms-overflow-style: none; /* For Internet Explorer and Edge */
+        scrollbar-width: none; /* For Firefox */
     }
+}
+    </style>
+    
 
-    @layer utilities {
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        @font-face {
-            font-family: Autography;
-            font-display: swap;
-            src: url("../fonts/Autography.otf") format("opentype");
-        }
-    }
-</style>
   <!-- fontawsome -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -307,7 +316,7 @@
             <p class="my-5 text-lg text-justify text-title-color min-md:text-base font-quiche font-bold pb-2 text-title-color relative w-fit bg-gradient-to-r from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent">
               1° Igreja Presbiteriana Renovada de Joinville
             </p>
-            <p class="my-5 text-lg text-justify text-title-color min-md:text-base font-quiche pb-2 text-title-color relative w-fit bg-gradient-to-r from-[#040404] via-[#121111] to-[#0c0c0c] bg-clip-text md:pt-8 text-transparent">
+            <p class="my-5 text-lg text-justify text-title-color min-md:text-base font-quiche pb-2 text-title-color relative w-fit bg-gradient-to-r  from-[#040404] via-[#121111] to-[#0c0c0c] bg-clip-text md:pt-8 text-transparent">
               A 1ª Igreja Presbiteriana Renovada de Joinville tem uma história marcada pela fé, dedicação e compromisso com a comunidade. Fundada há décadas, a igreja nasceu do desejo de um grupo de fiéis em criar um espaço de adoração e comunhão, onde a Palavra de Deus pudesse ser compartilhada e vivida intensamente.
               Desde seus primeiros dias, a igreja tem sido um farol de esperança, oferecendo apoio espiritual e social para seus membros e para a comunidade ao redor. Ao longo dos anos, a igreja cresceu, tanto em número de membros quanto em impacto, sempre guiada pelos princípios do amor, da renovação e da transformação.
               Hoje, a 1ª Igreja Presbiteriana Renovada de Joinville continua sua missão de proclamar o Evangelho, promover a unidade e servir ao próximo, sendo um testemunho vivo da graça e do poder de Deus.
@@ -316,6 +325,39 @@
         </div>
       </div>
     </section>
+
+    <section class="w-full max-w-[1180px] mx-auto px-5 py-12 md:py-10 bg-primary rounded-lg shadow-lg tracking-tighter relative z-10" id="visao-missao">
+      <div class="w-full max-w-[1180px] overflow-x-hidden px-5 py-20 mx-auto min-h-20 bg-[#8e6e55]/10">
+          <div class="flex gap-10 max-lg:flex-col">
+              <div class="w-full">
+                  <div class="h-fit w-full relative">
+                  </div>
+                  <p class="h-fit w-full relative">
+                    <h2 class="mb-10 font-quiche text-2xl font-bold pb-2 text-title-color relative w-fit bg-gradient-to-r from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent">
+                      Nossa Visão
+                    </h2>
+                  </p>
+                  <p class="my-5 text-lg text-justify text-title-color min-md:text-base font-quiche pb-2 text-title-color relative w-fit bg-gradient-to-r from-[#040404] via-[#121111] to-[#0c0c0c] bg-clip-text md:pt-8 text-transparent">
+                      Ser uma igreja vibrante e acolhedora que reflete o amor de Cristo, transformando vidas e impactando Joinville e o mundo com a mensagem do Evangelho. Buscamos ser um farol de esperança, onde pessoas de todas as idades e origens possam encontrar fé, cura e propósito em Deus.
+                  </p>
+                  
+          </div>
+      </div>
+  </section>
+  <section class="w-full max-w-[1180px] mx-auto px-5 py-12 md:py-10 bg-primary rounded-lg shadow-lg tracking-tighter relative z-10" id="nossa-missao">
+    <div class="w-full max-w-[1180px] overflow-x-hidden px-5 py-20 mx-auto min-h-20 bg-[#8e6e55]/10">
+      <p class="h-fit w-full relative">
+        <h2 class="mb-10 font-quiche text-2xl font-bold pb-2 text-title-color relative w-fit bg-gradient-to-r from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent">
+          Nossa Missão
+        </h2>
+      </p>
+      <p class="my-5 text-lg text-justify text-title-color min-md:text-base font-quiche pb-2 text-title-color relative w-fit bg-gradient-to-r from-[#040404] via-[#121111] to-[#0c0c0c] bg-clip-text md:pt-8 text-transparent">
+          Promover o Reino de Deus através da adoração genuína, do ensino bíblico relevante, da comunhão fraternal, do serviço à comunidade e da evangelização. Nosso propósito é fazer discípulos de Jesus Cristo, equipando-os para viverem uma vida de fé, crescerem em seu relacionamento com Deus e serem agentes de transformação em suas famílias, igrejas e na sociedade.
+      </p>
+  </div>
+    </div>
+   
+  </section>
 
     <script>
       function toggleAccordion(header) {
@@ -430,7 +472,7 @@
         });
 </script>
 
-  <a href="https://wa.me/554797861243?text=Como%2C%20posso%20ajudar!%20Você%20!"
+  <a href="https://wa.me/5547997736515?text=Oi%2C%20seja%20bem-vindo(a)!%20Aqui%20é%20a%20Dra.%20Luana%20Naiz%2C%20estou%20à%20disposição%20para%20te%20atender.%20Me%20envie%20seu%20nome%20e%20o%20tratamento%20que%20possui%20interesse%20em%20agendar.%20Assim%20que%20possível%2C%20retorno%20com%20as%20opções%20de%20horários.%20Qualquer%20dúvida%2C%20estou%20à%20disposição!"
     target="_blank" rel="noopener noreferrer"
     class="fixed size-10 bottom-4 right-2 z-50 flex items-center justify-center" aria-label="Abrir WhatsApp">
     <img src="./assets/images/png/whatsapp.png" alt="Ícone do WhatsApp" width="56" height="56" />
