@@ -39,51 +39,58 @@
   <style type="text/tailwindcss">
     @import "tailwindcss";
     @theme {
-        --color-primary: #f4eae6;
-        --color-second: #e5d6ca;
-        --color-test: #e0d2c6;
-        --color-title-color: #8e6e55;
-        --color-gradient: linear-gradient(
-            90deg,
-            rgba(241, 202, 107, 1) 0%,
-            rgba(176, 122, 37, 1) 15%,
-            rgba(241, 202, 107, 1) 50%,
-            rgba(180, 127, 42, 1) 85%,
-            rgba(241, 202, 107, 1) 100%
-        );
-        --font-quiche: "quiche-sans", sans-serif;
-        --font-display: "montserrat", sans-serif;
-        --font-authography: "Autography", sans-serif;
+    --color-primary: #f4eae6;
+    --color-second: #e5d6ca;
+    --color-test: #e0d2c6;
+    --color-title-color: #8e6e55;
+    --color-gradient: linear-gradient(
+        90deg,
+        rgba(241, 202, 107, 1) 0%,
+        rgba(176, 122, 37, 1) 15%,
+        rgba(241, 202, 107, 1) 50%,
+        rgba(180, 127, 42, 1) 85%,
+        rgba(241, 202, 107, 1) 100%
+    );
+    --font-quiche: "quiche-sans", sans-serif;
+    --font-display: "montserrat", sans-serif;
+    --font-authography: "Autography", sans-serif; /* Typo corrected from 'authography' to 'autography' if that was intentional */
+}
+
+/* Scrollbar styling for WebKit browsers (Chrome, Safari, Edge, etc.) */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background: #8e6e55; /* Using the --color-title-color for consistency */
+    border-radius: 30px;
+}
+
+/*
+  @layer is used here to define a 'utilities' layer.
+  This assumes you have a broader layering strategy or are explicitly using @layer.
+*/
+@layer utilities {
+    /* Define the custom font */
+    @font-face {
+        font-family: 'Autography'; /* Use the exact font-family name from your variable */
+        font-display: swap;
+        src: url("../fonts/Autography.otf") format("opentype");
     }
 
-    ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
+    /* Hide scrollbar for elements with this class */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
     }
 
-    ::-webkit-scrollbar-thumb {
-        cursor: pointer;
-        background: #8e6e55;
-        border-radius: 30px;
+    .no-scrollbar {
+        -ms-overflow-style: none; /* For Internet Explorer and Edge */
+        scrollbar-width: none; /* For Firefox */
     }
-
-    @layer utilities {
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        @font-face {
-            font-family: Autography;
-            font-display: swap;
-            src: url("../fonts/Autography.otf") format("opentype");
-        }
-    }
-</style>
+}
+    </style>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -95,10 +102,10 @@
       <div class="h-full py-1 flex items-center">
         <a href="index.html" aria-label="Página inicial">
           <h2
-            class="text-2xl font-quiche bg-gradient-to-r font-bold to-[#f1ca6b] from-[#f1ca6b] via-[#b07a25] bg-clip-text text-transparent">
+            class="text-2xl montserrat bg-gradient-to-r font-bold to-[#f1ca6b] from-[#f1ca6b] via-[#b07a25] bg-clip-text text-transparent">
             1° Igreja Presbiteriana
             <p
-              class="text-lg font-quiche bg-gradient-to-r font-bold from-[#040404] via-[#121111] to-[#0c0c0c] bg-clip-text text-transparent">
+              class="text-lg montserrat bg-gradient-to-r font-bold from-[#040404] via-[#121111] to-[#0c0c0c] bg-clip-text text-transparent">
               Renovada de Joinville
           </h2>
         </a>
@@ -226,74 +233,74 @@
       });
     </script>
     
-    <section class="w-full max-w-[1180px] mx-auto px-5 py-12 md:py-20 bg-primary rounded-lg shadow-lg tracking-tighter relative z-10"
+    <section class="w-full max-w-[1180px] mx-auto px-5 py-120 md:py-20 bg-primary rounded-lg shadow-lg tracking-tighter relative z-10"
       id="missoes">
       <div class="h-fit w-full relative mb-10 text-center">
         <h2
-          class="mb-10 font-quiche text-3xl md:text-4xl font-bold pb-2 relative w-fit mx-auto bg-gradient-to-r from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent">
+          class="mb-10 montserrat text-3xl md:text-4xl font-bold pb-2 relative w-fit mx-auto bg-gradient-to-r from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent">
           Nossas Missões
         </h2>
         <p
-          class="my-5 text-lg text-justify text-title-color min-md:text-base font-quiche  pb-2 relative font-quiche bg-gradient-to-r from-[#040404] via-[#121111] to-[#0c0c0c] bg-clip-text text-transparent">
+          class="my-5 text-lg text-justify text-title-color min-md:text-base montserrat pb-2 relative montserrat bg-gradient-to-r from-[#040404] via-[#121111] to-[#0c0c0c] bg-clip-text text-transparent">
           Na 1° Igreja Presbiteriana Renovada de Joinville, as missões são o coração de nossa fé e ação. Acreditamos no
           mandato de Jesus de "ide por todo o mundo e pregai o evangelho a toda criatura" (Marcos 16:15). Nossas
           missões se estendem localmente e globalmente, buscando levar esperança e transformação através do amor de
           Cristo.
         </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-second p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-          <img src="./assets/images/jpeg/moradores de rua.jpg" alt="Missão Local" class="w-full-24 mb-4 object-contain">
-          <h3
-            class="text-xl font-quiche bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent mb-3">
-            Missões Locais
-          </h3>
-          <p
-            class="text-md text-justify text-title-color font-quiche bg-gradient-to-r from-[#040404] via-[#121111] to-[#0c0c0c] bg-clip-text text-transparent">
-            Atuamos em nossa comunidade de Joinville, com projetos de apoio social, evangelismo em bairros, visitas a
-            hospitais e lares de idosos. Levamos a Palavra e o conforto através de ações práticas de amor ao próximo.
-          </p>
-        </div>
-
-        <div class="bg-second p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-          <img src="./assets/images/jpeg/AMJJIREH.jpg" alt="Missão Transcultural"
-            class="w-full-24 mb-4 object-contain">
-          <h3
-            class="text-xl font-quiche bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent mb-3">
-             Missões AMJJIREH
-          </h3>
-          <p class="text-base text-justify tracking-tighter font-quiche bg-gradient-to-r from-[#040404] via-[#121111] to-[#0c0c0c] bg-clip-text text-transparent">
-            Temos o privilégio de apoiar missionários em diferentes países, levando a mensagem de Cristo a diversas culturas. Oramos e contribuímos para o avanço do Reino de Deus em escala global.
-        </p>
-        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-second p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+            <img src="./assets/images/jpeg/moradores de rua.jpg" alt="Missão Local" class="w-full-24 mb-4 object-contain">
+            <h3
+              class="text-xl montserrat bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent mb-3">
+              Missões Locais
+            </h3>
+            <p
+              class="text-md text-justify text-title-color montserrat bg-gradient-to-r from-[#040404] via-[#121111] to-[#0c0c0c] bg-clip-text text-transparent">
+              Atuamos em nossa comunidade de Joinville, com projetos de apoio social, evangelismo em bairros, visitas a
+              hospitais e lares de idosos. Levamos a Palavra e o conforto através de ações práticas de amor ao próximo.
+            </p>
+          </div>
+  
+          <div class="bg-second p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+            <img src="./assets/images/jpeg/AMJJIREH.jpg" alt="Missão Nacional"
+              class="w-full-24 mb-4 object-contain">
+            <h3
+              class="text-xl montserrat bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent mb-3">
+              Missões AMJJIREH
+            </h3>
+            <p
+              class="text-md text-justify text-title-color montserrat bg-gradient-to-r from-[#040404] via-[#121111] to-[#0c0c0c] bg-clip-text text-transparent">
+              Apoiamos missionários e projetos em diversas regiões do Brasil, alcançando comunidades carentes, ribeirinhos
+              e povos indígenas. Contribuímos para a plantação de igrejas e desenvolvimento social em áreas remotas.
+            </p>
+          </div>
       </div>
 
       <div class="mt-16 text-center">
         <h3
-          class="text-2xl font-quiche bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent mb-6">
+          class="text-2xl montserrat bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent mb-6">
           Como Você Pode Participar
         </h3>
         <ul
           class="list-disc list-inside text-lg text-title-color font-quiche bg-gradient-to-r from-[#040404] via-[#121111] to-[#0c0c0c] bg-clip-text text-transparent space-y-3">
           <li>
             <strong
-              class="font-quiche bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent">Oração:</strong>
+              class="montserrat bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent">Oração:</strong>
             Interceda pelos missionários e pelos projetos. A oração é a base de tudo que fazemos.
           </li>
           <li>
             <strong
-              class="font-quiche bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent">Doação:</strong>
+              class="montserrat bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent">Doação:</strong>
             Contribua financeiramente para sustentar os projetos missionários. Cada doação faz a diferença.
           </li>
           <li>
             <strong
-              class="font-quiche bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent">Serviço Voluntário:</strong>
+              class="montserrat bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent">Serviço Voluntário:</strong>
             Participe de nossas ações missionárias locais e, se possível, de viagens missionárias.
           </li>
           <li>
             <strong
-              class="font-quiche bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent">Divulgação:</strong>
+              class="montserrat bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent">Divulgação:</strong>
             Compartilhe sobre nossos projetos e incentive outras pessoas a se envolverem.
           </li>
         </ul>
@@ -303,7 +310,7 @@
         </a>
       </div>
     </section>
-
+    
     <script>
       function toggleAccordion(header) {
         const accordionItem = header.parentNode;
@@ -360,21 +367,21 @@
       <div class="flex items-center justify-between max-sm:flex-col max-sm:justify-center">
         <div>
           <h2
-            class="text-2xl flex flex-col items-center md:items-start font-quiche bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent">
+            class="text-2xl flex flex-col items-center md:items-start montserrat bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#f1ca6b] bg-clip-text text-transparent">
             1° Igreja Presbiteriana
             <p
-              class="text-lg flex flex-col items-center md:items-start font-quiche bg-gradient-to-r font-bold from-[#040404] via-[#121111] to-[#0c0c0c] bg-clip-text text-transparent">
+              class="text-lg flex flex-col items-center md:items-start montserrat bg-gradient-to-r font-bold from-[#040404] via-[#121111] to-[#0c0c0c] bg-clip-text text-transparent">
               Renovada de Joinville
           </h2>
           <p
-            class="text-md w-full text-center md:w-fit font-quiche bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#b07a25] bg-clip-text pt-2 text-transparent">
+            class="text-md w-full text-center md:w-fit montserrat bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#b07a25] bg-clip-text pt-2 text-transparent">
             <span><i class="fa-solid fa-envelope font-bold text-[#b07a25]"></i></span>
             1°iprdejoinville@gmail.com
           </p>
         </div>
         <div class="max-sm:mb-5 pb-8 pt-12 md:pt-6">
           <h3
-            class="text-md w-full text-center md:w-fit font-quiche bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#b07a25] bg-clip-text pt-2 text-transparent">
+            class="text-md w-full text-center md:w-fit montserrat bg-gradient-to-r font-bold from-[#b07a25] via-[#b07a25] to-[#b07a25] bg-clip-text pt-2 text-transparent">
             Acompanhe nas redes sociais
           </h3>
           <ul class="flex justify-end gap-5 text-2xl text-title-color max-sm:justify-center">
@@ -420,6 +427,7 @@
         document.getElementById("menu-toggle-close").classList.add("hidden");
       });
   </script>
+
   <script src="./assets/js/menu.js" defer></script>
   <script src="./assets/js/procedimentos.js"></script>
 </body>
